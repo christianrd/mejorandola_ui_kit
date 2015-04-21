@@ -6,7 +6,7 @@
 
 <ul>
   <li>Stylus</li>
-  <li>DRY - Funciones y Mixins avanzados</li>
+  <li>DRY - Funciones y Mixins personalizados</li>
   <li>BEM (Block Element Modifier)</li>
   <li>SMACSS (Scalable and Modular Architecture for CSS)</li>
   <li>Custom Grid System</li>
@@ -14,6 +14,15 @@
 </ul>
 
 <p><a href="http://imontalvomiguel.github.io/mejorandola_ui_kit/"><strong>Demo</strong></a></p>
+
+<p>Aportes son bienvenidos !!!</p>
+
+<hr>
+<h3>License</h3>
+
+<p><strong>MIT</strong></p>
+
+
 
 
 

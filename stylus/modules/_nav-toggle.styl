@@ -1,11 +1,10 @@
 .nav-toggle
-  display: block
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   height: 50px
   line-height: 50px
-  position: fixed
-  right: em(25px)
   text-align: center
-  top: em(26px)
   width: 60px
   z-index: 100
 
@@ -30,7 +29,7 @@
 
       &:after
       &:before
-        @extend $pseudo-elements-hamburger 
+        @extend $pseudo-elements-hamburger
         background: palettes['crimson'].base
 
       &:after
@@ -40,4 +39,4 @@
       &:before
         bottom: 0
         transform: rotate(-45deg)
-  
+

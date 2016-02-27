@@ -4,12 +4,12 @@
 
   for i in (1..grid-col-count)
     // Generate col modifier classes
-    context = grid-context(grid-col-width, grid-col-count, grid-gutter-width) 
+    context = grid-context(grid-col-width, grid-col-count, grid-gutter-width)
     target = (grid-col-width * i) + (grid-gutter-width * (i - 1))
 
     .grid__col--{i}
       width: unit(target / context * 100, '%')
-      
+
   [class^="grid__col--"]
     doubly(grid-gutter-width/context * 100)
     float: left
@@ -17,11 +17,11 @@
     padding: 0 10px
     &:last-of-type
       float: right
-    
+
 
 +media-query('small')
   // Column styles
   [class^="grid__col--"]
     margin: em(12px) 0
 
-    
+

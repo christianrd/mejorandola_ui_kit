@@ -37,7 +37,10 @@
 .txt-right {
   text-align: right;
 }
-* {
+*,
+input,
+:before,
+:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -70,21 +73,14 @@ header {
   padding: 3em 0;
   text-align: center;
 }
-h1 {
-  color: #737373;
-  font-weight: 300;
-}
-h2 {
-  color: #909090;
-  font-weight: 300;
-}
+h1,
+h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #9b9b9b;
+  color: #213338;
   text-transform: uppercase;
-  font-weight: 700;
 }
 img {
   max-width: 100%;
@@ -101,7 +97,7 @@ footer {
   margin-top: 2rem;
   padding: 1rem 0;
 }
-/* normalize.css v3.0.0 | MIT License | git.io/normalize */
+/* normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -119,6 +115,7 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary {
@@ -140,7 +137,7 @@ template {
   display: none;
 }
 a {
-  background: transparent;
+  background-color: transparent;
 }
 a:active,
 a:hover {
@@ -190,7 +187,6 @@ figure {
   margin: 1em 40px;
 }
 hr {
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -254,8 +250,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 input[type="search"] {
   -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -298,9 +292,7 @@ th {
 }
 @media screen and (min-width: 769px) {
   .panel,
-  .panel--centered,
-.panel,
-.panel--centered {
+  .panel--centered {
     padding: 1.875em 0 1.25em 0;
   }
 }
@@ -310,9 +302,7 @@ th {
 }
 @media screen and (min-width: 769px) {
   .panel--padded,
-  .panel--padded--centered,
-.panel--padded,
-.panel--padded--centered {
+  .panel--padded--centered {
     padding: 1em 0;
     padding: 5em 0 2.125em 0;
   }
@@ -408,9 +398,7 @@ th {
 }
 @media screen and (min-width: 769px) {
   [class^="btn--"],
-  .form__button,
-[class^="btn--"],
-.form__button {
+  .form__button {
     margin: 0.5em;
     width: auto;
   }
@@ -462,7 +450,7 @@ th {
   border-style: solid;
   border-width: 1px;
   margin-bottom: 0.75em;
-  padding: 6px 1%;
+  padding: 0.5em;
   width: 100%;
 }
 .icomoon-demo__item,
@@ -647,11 +635,7 @@ th {
 }
 .navbar {
   position: relative;
-}
-@media screen and (min-width: 769px) {
-  .navbar {
-    margin: 1rem 0 0 0;
-  }
+  margin: 1rem 0 0 0;
 }
 @font-face {
   font-family: 'icomoon';
@@ -813,12 +797,11 @@ th {
 }
 .nav-toggle {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
   height: 50px;
   line-height: 50px;
-  position: fixed;
-  right: 1.5625em;
   text-align: center;
-  top: 1.625em;
   width: 60px;
   z-index: 100;
 }

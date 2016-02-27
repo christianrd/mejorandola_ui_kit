@@ -1,34 +1,34 @@
 // Mixins
-  
-bg-colors(hash) 
+
+bg-colors(hash)
   for key, value in hash //iterating an object(hash)
     &--{key} // interpolation, print the value in the selector
       background: value
       border-bottom: 3px solid darken(value, 20%)
 
 set-background-modifier(hash)
-  for key, value in hash 
+  for key, value in hash
     &--{key}
       background: value
       {block}
 
 img-replace(img, w, h, disp = block)
-  background: url(path--rel + "/" + img) no-repeat 
+  background: url(path--rel + "/" + img) no-repeat
   background-size: cover
   display: disp
   height: h
   width: w
 
 p-el(el, width = auto, height = auto)
-  
+
   if el == "after" or el == "before"
     &:{el}
       @extend $pseudos
       height: height
       width: width
       {block} // Include a block of code to this mixin
-      
-  else 
+
+  else
     error('Invalid pseudoelement: ' + el) // Stylus error reporting to console
 
 // BEM slectors
@@ -36,14 +36,14 @@ p-el(el, width = auto, height = auto)
 element(ele-name)
   &__{ele-name}
     {block}
-    
+
 modifier(mod-name)
  &--{mod-name}
     {block}
-  
+
 // Siblings selector
 doubly(margin)
-  & + & 
+  & + &
     margin-left: unit(margin, '%')
     {block}
 
@@ -54,11 +54,11 @@ media-query(break-point)
     @media screen and (min-width: small-bp) and (max-width: medium-bp)
       {block}
   else if break-point == 'medium'
-    @media screen and (min-width: medium-bp + 1) 
+    @media screen and (min-width: medium-bp + 1)
       {block}
   else if break-point == 'large'
     @media screen and (min-width: large-bp)
       {block}
-  else 
+  else
     error('Invalid breakpoint: ', break-point)
 

@@ -5,16 +5,16 @@
   margin-bottom: em(30px)
   margin-top: em(20px)
   overflow-x: auto
-  padding: 0 
+  padding: 0
   white-space: nowrap
 
   +element(item)
     /*
-    * The best practice is to have place holdres for base styles 
-    * especially with modifiers in order to prevent 
+    * The best practice is to have place holdres for base styles
+    * especially with modifiers in order to prevent
     * writing element class and modifier class in our markup this would be too long
     */
-      
+
     & // A little bit tricky with stylus... at the moment we need to put & in order to get work
       @extend $nav-item-display
 
@@ -29,7 +29,7 @@
       &:hover
         background: palettes['atlantis'].dark
 
-    +modifier(current) 
+    +modifier(current)
       &
         @extend $nav-item-display
       a
